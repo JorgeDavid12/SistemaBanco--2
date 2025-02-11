@@ -13,3 +13,18 @@ C:\Users\jdvil\Source\Repos\SistemaBanco\CapaPresentacion\obj\Debug\CapaPresenta
 C:\Users\jdvil\Source\Repos\SistemaBanco\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CopyComplete
 C:\Users\jdvil\Source\Repos\SistemaBanco\CapaPresentacion\obj\Debug\CapaPresentacion.exe
 C:\Users\jdvil\Source\Repos\SistemaBanco\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
+C:\Users\jdvil\source\repos\SistemaBanco -2\CapaPresentacion\bin\Debug\CapaPresentacion.exe.config
+C:\Users\jdvil\source\repos\SistemaBanco -2\CapaPresentacion\bin\Debug\CapaPresentacion.exe
+C:\Users\jdvil\source\repos\SistemaBanco -2\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
+C:\Users\jdvil\source\repos\SistemaBanco -2\CapaPresentacion\bin\Debug\CapaDatos.dll
+C:\Users\jdvil\source\repos\SistemaBanco -2\CapaPresentacion\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\jdvil\source\repos\SistemaBanco -2\CapaPresentacion\bin\Debug\CapaDatos.pdb
+C:\Users\jdvil\source\repos\SistemaBanco -2\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.AssemblyReference.cache
+C:\Users\jdvil\source\repos\SistemaBanco -2\CapaPresentacion\obj\Debug\CapaPresentacion.FrmClientes.resources
+C:\Users\jdvil\source\repos\SistemaBanco -2\CapaPresentacion\obj\Debug\CapaPresentacion.FrmMenuPrincipal.resources
+C:\Users\jdvil\source\repos\SistemaBanco -2\CapaPresentacion\obj\Debug\CapaPresentacion.Properties.Resources.resources
+C:\Users\jdvil\source\repos\SistemaBanco -2\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.GenerateResource.cache
+C:\Users\jdvil\source\repos\SistemaBanco -2\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CoreCompileInputs.cache
+C:\Users\jdvil\source\repos\SistemaBanco -2\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CopyComplete
+C:\Users\jdvil\source\repos\SistemaBanco -2\CapaPresentacion\obj\Debug\CapaPresentacion.exe
+C:\Users\jdvil\source\repos\SistemaBanco -2\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
