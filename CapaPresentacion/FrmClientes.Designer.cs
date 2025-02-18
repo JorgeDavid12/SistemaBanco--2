@@ -131,7 +131,7 @@
             this.btnCancelar.IconColor = System.Drawing.Color.Red;
             this.btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCancelar.IconSize = 35;
-            this.btnCancelar.Location = new System.Drawing.Point(1015, 153);
+            this.btnCancelar.Location = new System.Drawing.Point(1015, 155);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(129, 40);
             this.btnCancelar.TabIndex = 16;

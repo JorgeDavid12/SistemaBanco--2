@@ -34,6 +34,26 @@ namespace CapaPresentacion
             dgvClientes.DataSource = dtMostrarClientes;
         }
 
+        private void mtdLimpiarTextBoxes(Control parent)
+        {
+            foreach (Control c in parent.Controls)
+            {
+                if (c is TextBox)
+                {
+                    ((TextBox)c).Clear();
+                }
+                else if (c is ComboBox)
+                {
+                    ((ComboBox)c).SelectedIndex = -1; 
+                    ((ComboBox)c).Text = string.Empty; 
+                }
+                else if (c.HasChildren)
+                {
+                    mtdLimpiarTextBoxes(c);
+                }
+            }
+        }
+
         private void FrmClientes_Load(object sender, EventArgs e)
         {
             MtdMostrarClientes();
@@ -46,7 +66,7 @@ namespace CapaPresentacion
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-
+            mtdLimpiarTextBoxes(this);
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
