@@ -30,12 +30,12 @@
         {
             this.PanelMenu = new System.Windows.Forms.Panel();
             this.PanelSeleccion = new System.Windows.Forms.Panel();
-            this.btnReportes = new FontAwesome.Sharp.IconButton();
-            this.btnVentas = new FontAwesome.Sharp.IconButton();
-            this.btnInventarios = new FontAwesome.Sharp.IconButton();
-            this.btnProductos = new FontAwesome.Sharp.IconButton();
-            this.btnCategorias = new FontAwesome.Sharp.IconButton();
-            this.btnProveedores = new FontAwesome.Sharp.IconButton();
+            this.btnUsuarios = new FontAwesome.Sharp.IconButton();
+            this.btnTarjetas = new FontAwesome.Sharp.IconButton();
+            this.btnPrestamos = new FontAwesome.Sharp.IconButton();
+            this.btnPagos = new FontAwesome.Sharp.IconButton();
+            this.btnMovimientos = new FontAwesome.Sharp.IconButton();
+            this.btnCuentas = new FontAwesome.Sharp.IconButton();
             this.btnClientes = new FontAwesome.Sharp.IconButton();
             this.PanelMenuInferior = new System.Windows.Forms.Panel();
             this.btnConfiguracion = new FontAwesome.Sharp.IconButton();
@@ -57,12 +57,12 @@
             this.PanelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(34)))), ((int)(((byte)(118)))));
             this.PanelMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PanelMenu.Controls.Add(this.PanelSeleccion);
-            this.PanelMenu.Controls.Add(this.btnReportes);
-            this.PanelMenu.Controls.Add(this.btnVentas);
-            this.PanelMenu.Controls.Add(this.btnInventarios);
-            this.PanelMenu.Controls.Add(this.btnProductos);
-            this.PanelMenu.Controls.Add(this.btnCategorias);
-            this.PanelMenu.Controls.Add(this.btnProveedores);
+            this.PanelMenu.Controls.Add(this.btnUsuarios);
+            this.PanelMenu.Controls.Add(this.btnTarjetas);
+            this.PanelMenu.Controls.Add(this.btnPrestamos);
+            this.PanelMenu.Controls.Add(this.btnPagos);
+            this.PanelMenu.Controls.Add(this.btnMovimientos);
+            this.PanelMenu.Controls.Add(this.btnCuentas);
             this.PanelMenu.Controls.Add(this.btnClientes);
             this.PanelMenu.Controls.Add(this.PanelMenuInferior);
             this.PanelMenu.Controls.Add(this.PanelMenuSuperior);
@@ -80,119 +80,119 @@
             this.PanelSeleccion.Size = new System.Drawing.Size(6, 45);
             this.PanelSeleccion.TabIndex = 9;
             // 
-            // btnReportes
+            // btnUsuarios
             // 
-            this.btnReportes.FlatAppearance.BorderSize = 0;
-            this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReportes.Font = new System.Drawing.Font("Calisto MT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReportes.ForeColor = System.Drawing.Color.White;
-            this.btnReportes.IconChar = FontAwesome.Sharp.IconChar.ChartSimple;
-            this.btnReportes.IconColor = System.Drawing.Color.White;
-            this.btnReportes.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnReportes.IconSize = 35;
-            this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReportes.Location = new System.Drawing.Point(2, 461);
-            this.btnReportes.Name = "btnReportes";
-            this.btnReportes.Size = new System.Drawing.Size(195, 51);
-            this.btnReportes.TabIndex = 8;
-            this.btnReportes.Text = "Reportes";
-            this.btnReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnReportes.UseVisualStyleBackColor = true;
+            this.btnUsuarios.FlatAppearance.BorderSize = 0;
+            this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsuarios.Font = new System.Drawing.Font("Calisto MT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsuarios.ForeColor = System.Drawing.Color.White;
+            this.btnUsuarios.IconChar = FontAwesome.Sharp.IconChar.Users;
+            this.btnUsuarios.IconColor = System.Drawing.Color.White;
+            this.btnUsuarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnUsuarios.IconSize = 35;
+            this.btnUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsuarios.Location = new System.Drawing.Point(2, 461);
+            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.Size = new System.Drawing.Size(195, 51);
+            this.btnUsuarios.TabIndex = 8;
+            this.btnUsuarios.Text = "Usuarios";
+            this.btnUsuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnUsuarios.UseVisualStyleBackColor = true;
             // 
-            // btnVentas
+            // btnTarjetas
             // 
-            this.btnVentas.FlatAppearance.BorderSize = 0;
-            this.btnVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVentas.Font = new System.Drawing.Font("Calisto MT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVentas.ForeColor = System.Drawing.Color.White;
-            this.btnVentas.IconChar = FontAwesome.Sharp.IconChar.CartShopping;
-            this.btnVentas.IconColor = System.Drawing.Color.White;
-            this.btnVentas.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnVentas.IconSize = 35;
-            this.btnVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVentas.Location = new System.Drawing.Point(2, 406);
-            this.btnVentas.Name = "btnVentas";
-            this.btnVentas.Size = new System.Drawing.Size(195, 51);
-            this.btnVentas.TabIndex = 7;
-            this.btnVentas.Text = "Ventas";
-            this.btnVentas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnVentas.UseVisualStyleBackColor = true;
+            this.btnTarjetas.FlatAppearance.BorderSize = 0;
+            this.btnTarjetas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTarjetas.Font = new System.Drawing.Font("Calisto MT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTarjetas.ForeColor = System.Drawing.Color.White;
+            this.btnTarjetas.IconChar = FontAwesome.Sharp.IconChar.CreditCardAlt;
+            this.btnTarjetas.IconColor = System.Drawing.Color.White;
+            this.btnTarjetas.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnTarjetas.IconSize = 35;
+            this.btnTarjetas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTarjetas.Location = new System.Drawing.Point(2, 406);
+            this.btnTarjetas.Name = "btnTarjetas";
+            this.btnTarjetas.Size = new System.Drawing.Size(195, 51);
+            this.btnTarjetas.TabIndex = 7;
+            this.btnTarjetas.Text = "Tarjetas";
+            this.btnTarjetas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTarjetas.UseVisualStyleBackColor = true;
             // 
-            // btnInventarios
+            // btnPrestamos
             // 
-            this.btnInventarios.FlatAppearance.BorderSize = 0;
-            this.btnInventarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInventarios.Font = new System.Drawing.Font("Calisto MT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInventarios.ForeColor = System.Drawing.Color.White;
-            this.btnInventarios.IconChar = FontAwesome.Sharp.IconChar.Warehouse;
-            this.btnInventarios.IconColor = System.Drawing.Color.White;
-            this.btnInventarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnInventarios.IconSize = 35;
-            this.btnInventarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInventarios.Location = new System.Drawing.Point(2, 351);
-            this.btnInventarios.Name = "btnInventarios";
-            this.btnInventarios.Size = new System.Drawing.Size(195, 51);
-            this.btnInventarios.TabIndex = 6;
-            this.btnInventarios.Text = "Inventarios";
-            this.btnInventarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnInventarios.UseVisualStyleBackColor = true;
+            this.btnPrestamos.FlatAppearance.BorderSize = 0;
+            this.btnPrestamos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrestamos.Font = new System.Drawing.Font("Calisto MT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrestamos.ForeColor = System.Drawing.Color.White;
+            this.btnPrestamos.IconChar = FontAwesome.Sharp.IconChar.HandHoldingUsd;
+            this.btnPrestamos.IconColor = System.Drawing.Color.White;
+            this.btnPrestamos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnPrestamos.IconSize = 35;
+            this.btnPrestamos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrestamos.Location = new System.Drawing.Point(2, 351);
+            this.btnPrestamos.Name = "btnPrestamos";
+            this.btnPrestamos.Size = new System.Drawing.Size(195, 51);
+            this.btnPrestamos.TabIndex = 6;
+            this.btnPrestamos.Text = "Prestamos";
+            this.btnPrestamos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPrestamos.UseVisualStyleBackColor = true;
             // 
-            // btnProductos
+            // btnPagos
             // 
-            this.btnProductos.FlatAppearance.BorderSize = 0;
-            this.btnProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProductos.Font = new System.Drawing.Font("Calisto MT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProductos.ForeColor = System.Drawing.Color.White;
-            this.btnProductos.IconChar = FontAwesome.Sharp.IconChar.BoxOpen;
-            this.btnProductos.IconColor = System.Drawing.Color.White;
-            this.btnProductos.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnProductos.IconSize = 35;
-            this.btnProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProductos.Location = new System.Drawing.Point(2, 296);
-            this.btnProductos.Name = "btnProductos";
-            this.btnProductos.Size = new System.Drawing.Size(195, 51);
-            this.btnProductos.TabIndex = 5;
-            this.btnProductos.Text = "Productos";
-            this.btnProductos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnProductos.UseVisualStyleBackColor = true;
+            this.btnPagos.FlatAppearance.BorderSize = 0;
+            this.btnPagos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPagos.Font = new System.Drawing.Font("Calisto MT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPagos.ForeColor = System.Drawing.Color.White;
+            this.btnPagos.IconChar = FontAwesome.Sharp.IconChar.MoneyBillAlt;
+            this.btnPagos.IconColor = System.Drawing.Color.White;
+            this.btnPagos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnPagos.IconSize = 35;
+            this.btnPagos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPagos.Location = new System.Drawing.Point(2, 296);
+            this.btnPagos.Name = "btnPagos";
+            this.btnPagos.Size = new System.Drawing.Size(195, 51);
+            this.btnPagos.TabIndex = 5;
+            this.btnPagos.Text = "Pagos";
+            this.btnPagos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPagos.UseVisualStyleBackColor = true;
             // 
-            // btnCategorias
+            // btnMovimientos
             // 
-            this.btnCategorias.FlatAppearance.BorderSize = 0;
-            this.btnCategorias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCategorias.Font = new System.Drawing.Font("Calisto MT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCategorias.ForeColor = System.Drawing.Color.White;
-            this.btnCategorias.IconChar = FontAwesome.Sharp.IconChar.BoxesStacked;
-            this.btnCategorias.IconColor = System.Drawing.Color.White;
-            this.btnCategorias.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCategorias.IconSize = 35;
-            this.btnCategorias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCategorias.Location = new System.Drawing.Point(2, 241);
-            this.btnCategorias.Name = "btnCategorias";
-            this.btnCategorias.Size = new System.Drawing.Size(195, 51);
-            this.btnCategorias.TabIndex = 4;
-            this.btnCategorias.Text = "Categorias";
-            this.btnCategorias.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCategorias.UseVisualStyleBackColor = true;
+            this.btnMovimientos.FlatAppearance.BorderSize = 0;
+            this.btnMovimientos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMovimientos.Font = new System.Drawing.Font("Calisto MT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMovimientos.ForeColor = System.Drawing.Color.White;
+            this.btnMovimientos.IconChar = FontAwesome.Sharp.IconChar.ExchangeAlt;
+            this.btnMovimientos.IconColor = System.Drawing.Color.White;
+            this.btnMovimientos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMovimientos.IconSize = 35;
+            this.btnMovimientos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMovimientos.Location = new System.Drawing.Point(2, 241);
+            this.btnMovimientos.Name = "btnMovimientos";
+            this.btnMovimientos.Size = new System.Drawing.Size(195, 51);
+            this.btnMovimientos.TabIndex = 4;
+            this.btnMovimientos.Text = "Movimientos";
+            this.btnMovimientos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMovimientos.UseVisualStyleBackColor = true;
             // 
-            // btnProveedores
+            // btnCuentas
             // 
-            this.btnProveedores.FlatAppearance.BorderSize = 0;
-            this.btnProveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProveedores.Font = new System.Drawing.Font("Calisto MT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProveedores.ForeColor = System.Drawing.Color.White;
-            this.btnProveedores.IconChar = FontAwesome.Sharp.IconChar.Truck;
-            this.btnProveedores.IconColor = System.Drawing.Color.White;
-            this.btnProveedores.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnProveedores.IconSize = 35;
-            this.btnProveedores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProveedores.Location = new System.Drawing.Point(2, 186);
-            this.btnProveedores.Name = "btnProveedores";
-            this.btnProveedores.Size = new System.Drawing.Size(195, 51);
-            this.btnProveedores.TabIndex = 3;
-            this.btnProveedores.Text = "Proveedores";
-            this.btnProveedores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnProveedores.UseVisualStyleBackColor = true;
+            this.btnCuentas.FlatAppearance.BorderSize = 0;
+            this.btnCuentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCuentas.Font = new System.Drawing.Font("Calisto MT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCuentas.ForeColor = System.Drawing.Color.White;
+            this.btnCuentas.IconChar = FontAwesome.Sharp.IconChar.CreditCardAlt;
+            this.btnCuentas.IconColor = System.Drawing.Color.White;
+            this.btnCuentas.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnCuentas.IconSize = 35;
+            this.btnCuentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCuentas.Location = new System.Drawing.Point(2, 186);
+            this.btnCuentas.Name = "btnCuentas";
+            this.btnCuentas.Size = new System.Drawing.Size(195, 51);
+            this.btnCuentas.TabIndex = 3;
+            this.btnCuentas.Text = "Cuentas";
+            this.btnCuentas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCuentas.UseVisualStyleBackColor = true;
             // 
             // btnClientes
             // 
@@ -373,12 +373,12 @@
         private System.Windows.Forms.Panel PanelMenuSuperior;
         private System.Windows.Forms.Panel PanelSuperior;
         private FontAwesome.Sharp.IconButton btnClientes;
-        private FontAwesome.Sharp.IconButton btnReportes;
-        private FontAwesome.Sharp.IconButton btnVentas;
-        private FontAwesome.Sharp.IconButton btnInventarios;
-        private FontAwesome.Sharp.IconButton btnProductos;
-        private FontAwesome.Sharp.IconButton btnCategorias;
-        private FontAwesome.Sharp.IconButton btnProveedores;
+        private FontAwesome.Sharp.IconButton btnUsuarios;
+        private FontAwesome.Sharp.IconButton btnTarjetas;
+        private FontAwesome.Sharp.IconButton btnPrestamos;
+        private FontAwesome.Sharp.IconButton btnPagos;
+        private FontAwesome.Sharp.IconButton btnMovimientos;
+        private FontAwesome.Sharp.IconButton btnCuentas;
         private FontAwesome.Sharp.IconButton btnConfiguracion;
         private FontAwesome.Sharp.IconButton btnOcultarMenu;
         private FontAwesome.Sharp.IconButton btnInicio;
