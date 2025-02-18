@@ -28,3 +28,4 @@ C:\Users\jdvil\source\repos\SistemaBanco -2\CapaPresentacion\obj\Debug\CapaPrese
 C:\Users\jdvil\source\repos\SistemaBanco -2\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CopyComplete
 C:\Users\jdvil\source\repos\SistemaBanco -2\CapaPresentacion\obj\Debug\CapaPresentacion.exe
 C:\Users\jdvil\source\repos\SistemaBanco -2\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
+C:\Users\jdvil\source\repos\SistemaBanco -2\CapaPresentacion\obj\Debug\CapaPresentacion.FrmCuentas.resources

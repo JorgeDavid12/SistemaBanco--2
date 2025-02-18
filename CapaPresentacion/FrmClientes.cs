@@ -43,5 +43,20 @@ namespace CapaPresentacion
         {
 
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
