@@ -58,5 +58,38 @@ namespace CapaPresentacion
             txtFechaApertura.Text = dgvClientes.SelectedCells[5].Value.ToString();
             cboxEstado.Text = dgvClientes.SelectedCells[6].Value.ToString();
         }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                CDCuentas cp_classCuentas = new CDCuentas();
+
+                int codigoCuenta = int.Parse(txtCodigoCuentas.Text);
+                string numeroCuenta = txtNumeroC.Text;
+                string tipoC = cboxTipoC.Text;
+                decimal saldo = decimal.Parse(txtSaldo.Text);
+                DateTime fechaApertura = DateTime.Parse(txtFechaApertura.Text);
+                string Estado = cboxEstado.Text;
+
+                int vCantidadRegistros = cp_classCuentas.CP_mtdActualizarCuentas(codigoCuenta, numeroCuenta, tipoC, saldo, fechaApertura, Estado);
+                MtdMostrarCuentas();
+
+                if (vCantidadRegistros > 0)
+                {
+                    MessageBox.Show("Registros Actualizado!!", "Correcto!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MtdMostrarCuentas();
+                }
+                else
+                {
+                    MessageBox.Show("No se encontró codigo!!", "Error actualización", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace, "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

@@ -55,5 +55,52 @@ namespace CapaDatos
                 cmd.ExecuteNonQuery();
             }
         }
+
+        public int CP_mtdActualizarCuentas(int Codigo, string NumeroCuenta, string TipoCuenta, decimal Saldo, DateTime FechaApertura, string Estado)
+        {
+            /* int vContarRegistrosAfectados = 0;
+
+             string vUspActualizarClientes = "usp_clientes_editar";
+             SqlCommand commActualizarClientes = new SqlCommand(vUspActualizarClientes, db_conexion.MtdAbrirConexion());
+             commActualizarClientes.CommandType = CommandType.StoredProcedure;
+
+             commActualizarClientes.Parameters.AddWithValue("@Codigo", Codigo);
+             commActualizarClientes.Parameters.AddWithValue("@Nombre", Nombre);
+             commActualizarClientes.Parameters.AddWithValue("@Direccion", Direccion);
+             commActualizarClientes.Parameters.AddWithValue("@Departamento", Departamento);
+             commActualizarClientes.Parameters.AddWithValue("@Pais", Pais);
+             commActualizarClientes.Parameters.AddWithValue("@Categoria", Categoria);
+             commActualizarClientes.Parameters.AddWithValue("@Estado", Estado);
+
+             vContarRegistrosAfectados = commActualizarClientes.ExecuteNonQuery();
+
+             // 🔴 Asegurarse de cerrar la conexión después de usarla
+             db_conexion.MtdCerrarConexion();
+             return vContarRegistrosAfectados;*/
+
+            int vContarRegistrosAfectados = 0;
+            string vUspActualizarCuentas = "uspCuentasEditar";
+
+            using (SqlConnection conn = conexion.MtdAbrirConexion())
+            {
+                using (SqlCommand commActualizarCuentas = new SqlCommand(vUspActualizarCuentas, conn))
+                {
+                    commActualizarCuentas.CommandType = CommandType.StoredProcedure;
+
+                    commActualizarCuentas.Parameters.AddWithValue("@CodigoCuenta", Codigo);
+                    commActualizarCuentas.Parameters.AddWithValue("@NumeroCuenta", NumeroCuenta);
+                    commActualizarCuentas.Parameters.AddWithValue("@TipoCuenta", TipoCuenta);
+                    commActualizarCuentas.Parameters.AddWithValue("@Saldo", Saldo);
+                    commActualizarCuentas.Parameters.AddWithValue("@FechaApertura", FechaApertura);
+                    commActualizarCuentas.Parameters.AddWithValue("@Estado", Estado);
+
+                    // ⚠️ Cambiar ExecuteNonQuery() por ExecuteScalar()
+                    object result = commActualizarCuentas.ExecuteScalar();
+                    vContarRegistrosAfectados = result != null ? Convert.ToInt32(result) : 0;
+                }
+            }
+
+            return vContarRegistrosAfectados;
+        }
     }
 }
