@@ -99,11 +99,11 @@
             this.btnGuardar.IconColor = System.Drawing.Color.MediumSeaGreen;
             this.btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuardar.IconSize = 35;
-            this.btnGuardar.Location = new System.Drawing.Point(1015, 152);
+            this.btnGuardar.Location = new System.Drawing.Point(1015, 61);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(129, 40);
             this.btnGuardar.TabIndex = 18;
-            this.btnGuardar.Text = "Cancelar";
+            this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
@@ -115,7 +115,7 @@
             this.btnActualizar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnActualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnActualizar.IconSize = 35;
-            this.btnActualizar.Location = new System.Drawing.Point(1015, 102);
+            this.btnActualizar.Location = new System.Drawing.Point(1015, 107);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(129, 40);
             this.btnActualizar.TabIndex = 17;
@@ -131,7 +131,7 @@
             this.btnCancelar.IconColor = System.Drawing.Color.Red;
             this.btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCancelar.IconSize = 35;
-            this.btnCancelar.Location = new System.Drawing.Point(1015, 50);
+            this.btnCancelar.Location = new System.Drawing.Point(1015, 153);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(129, 40);
             this.btnCancelar.TabIndex = 16;
