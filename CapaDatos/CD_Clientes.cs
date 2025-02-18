@@ -86,7 +86,21 @@ namespace CapaDatos
 
             return vContarRegistrosAfectados;
         }
+        //ssssss   
 
+        public int CP_mtdEliminarClientes(string codigo)
+        {
+            int vCantidadRegistrosEliminados = 0;
+
+            string vUspEliminarClientes = "usp_clientes_eliminar";
+            SqlCommand commEliminarClientes = new SqlCommand(vUspEliminarClientes, db_conexion.MtdAbrirConexion());
+            commEliminarClientes.CommandType = CommandType.StoredProcedure;
+
+            commEliminarClientes.Parameters.AddWithValue("@Codigo", codigo);
+
+            vCantidadRegistrosEliminados = commEliminarClientes.ExecuteNonQuery();
+            return vCantidadRegistrosEliminados;
+        }
 
     }
 }
