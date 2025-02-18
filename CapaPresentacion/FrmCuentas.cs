@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaDatos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,18 @@ namespace CapaPresentacion
         public FrmCuentas()
         {
             InitializeComponent();
+        }
+
+        public void MtdMostrarCuentas()
+        {
+            CDCuentas cd_cuentas = new CDCuentas();
+            DataTable dtMostrarCuentas = cd_cuentas.MtMostrarCuentas();
+            dgvClientes.DataSource = dtMostrarCuentas;
+        }
+
+        private void FrmCuentas_Load(object sender, EventArgs e)
+        {
+            MtdMostrarCuentas();
         }
     }
 }

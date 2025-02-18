@@ -151,5 +151,16 @@ namespace CapaPresentacion
 
             }
         }
+
+        private void dgvClientes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtCodigoCliente.Text = dgvClientes.SelectedCells[0].Value.ToString();
+            txtNombres.Text = dgvClientes.SelectedCells[1].Value.ToString();
+            txtDireccion.Text = dgvClientes.SelectedCells[2].Value.ToString();
+            txtDepartamento.Text = dgvClientes.SelectedCells[3].Value.ToString();
+            txtPais.Text = dgvClientes.SelectedCells[4].Value.ToString();
+            cboxCategoria.Text = dgvClientes.SelectedCells[5].Value.ToString();
+            cboxEstado.Text = dgvClientes.SelectedCells[6].Value.ToString();
+        }
     }
 }

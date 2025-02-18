@@ -300,6 +300,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmCuentas";
             this.Text = "FrmCuentas";
+            this.Load += new System.EventHandler(this.FrmCuentas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             this.gboxCuentas.ResumeLayout(false);
             this.gboxCuentas.PerformLayout();
