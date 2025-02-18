@@ -39,23 +39,51 @@ namespace CapaDatos
             cmd_InsertarClientes.ExecuteNonQuery();
         }
 
-        public int CP_mtdActualizarClientes(string Codigo, string Nombre, string Direccion, string Departamento, string Pais, string Categoria, string Estado)
+        public int CP_mtdActualizarClientes(int Codigo, string Nombre, string Direccion, string Departamento, string Pais, string Categoria, string Estado)
         {
+            /* int vContarRegistrosAfectados = 0;
+
+             string vUspActualizarClientes = "usp_clientes_editar";
+             SqlCommand commActualizarClientes = new SqlCommand(vUspActualizarClientes, db_conexion.MtdAbrirConexion());
+             commActualizarClientes.CommandType = CommandType.StoredProcedure;
+
+             commActualizarClientes.Parameters.AddWithValue("@Codigo", Codigo);
+             commActualizarClientes.Parameters.AddWithValue("@Nombre", Nombre);
+             commActualizarClientes.Parameters.AddWithValue("@Direccion", Direccion);
+             commActualizarClientes.Parameters.AddWithValue("@Departamento", Departamento);
+             commActualizarClientes.Parameters.AddWithValue("@Pais", Pais);
+             commActualizarClientes.Parameters.AddWithValue("@Categoria", Categoria);
+             commActualizarClientes.Parameters.AddWithValue("@Estado", Estado);
+
+             vContarRegistrosAfectados = commActualizarClientes.ExecuteNonQuery();
+
+             // 🔴 Asegurarse de cerrar la conexión después de usarla
+             db_conexion.MtdCerrarConexion();
+             return vContarRegistrosAfectados;*/
+
             int vContarRegistrosAfectados = 0;
-
             string vUspActualizarClientes = "usp_clientes_editar";
-            SqlCommand commActualizarClientes = new SqlCommand(vUspActualizarClientes, db_conexion.MtdAbrirConexion());
-            commActualizarClientes.CommandType = CommandType.StoredProcedure;
 
-            commActualizarClientes.Parameters.AddWithValue("@Codigo", Codigo);
-            commActualizarClientes.Parameters.AddWithValue("@vNombre", Nombre);
-            commActualizarClientes.Parameters.AddWithValue("@Direccion", Direccion);
-            commActualizarClientes.Parameters.AddWithValue("@Departamento", Departamento);
-            commActualizarClientes.Parameters.AddWithValue("@Pais", Pais);
-            commActualizarClientes.Parameters.AddWithValue("@vCategoria", Categoria);
-            commActualizarClientes.Parameters.AddWithValue("@Estado", Estado);
+            using (SqlConnection conn = db_conexion.MtdAbrirConexion())
+            {
+                using (SqlCommand commActualizarClientes = new SqlCommand(vUspActualizarClientes, conn))
+                {
+                    commActualizarClientes.CommandType = CommandType.StoredProcedure;
 
-            vContarRegistrosAfectados = commActualizarClientes.ExecuteNonQuery();
+                    commActualizarClientes.Parameters.AddWithValue("@Codigo", Codigo);
+                    commActualizarClientes.Parameters.AddWithValue("@Nombre", Nombre);
+                    commActualizarClientes.Parameters.AddWithValue("@Direccion", Direccion);
+                    commActualizarClientes.Parameters.AddWithValue("@Departamento", Departamento);
+                    commActualizarClientes.Parameters.AddWithValue("@Pais", Pais);
+                    commActualizarClientes.Parameters.AddWithValue("@Categoria", Categoria);
+                    commActualizarClientes.Parameters.AddWithValue("@Estado", Estado);
+
+                    // ⚠️ Cambiar ExecuteNonQuery() por ExecuteScalar()
+                    object result = commActualizarClientes.ExecuteScalar();
+                    vContarRegistrosAfectados = result != null ? Convert.ToInt32(result) : 0;
+                }
+            }
+
             return vContarRegistrosAfectados;
         }
 

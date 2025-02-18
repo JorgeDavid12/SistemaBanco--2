@@ -51,7 +51,48 @@ namespace CapaPresentacion
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(txtCodigoCliente.Text) || !int.TryParse(txtCodigoCliente.Text, out int codigo))
+                {
+                    MessageBox.Show("Ingrese un código de cliente válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                CD_Clientes cp_classClientes = new CD_Clientes();
 
+                //int codigo = int.Parse(txtCodigoCliente.Text);
+                string nombre = txtNombres.Text;
+                string Direccion = txtDireccion.Text;
+                string Departamento = txtDepartamento.Text;
+                string Pais = txtPais.Text;
+                string categoria = cboxCategoria.Text;
+                string Estado = cboxEstado.Text;
+
+                if (string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(Direccion) ||
+            string.IsNullOrEmpty(Departamento) || string.IsNullOrEmpty(Pais) ||
+            string.IsNullOrEmpty(categoria) || string.IsNullOrEmpty(Estado))
+                {
+                    MessageBox.Show("Por favor, complete todos los campos antes de actualizar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                int vCantidadRegistros = cp_classClientes.CP_mtdActualizarClientes(codigo, nombre, Direccion, Departamento, Pais, categoria, Estado);
+                MtdMostrarClientes();
+
+                if (vCantidadRegistros > 0)
+                {
+                    MessageBox.Show("Registros Actualizado!!", "Correcto!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MtdMostrarClientes();
+                }
+                else
+                {
+                    MessageBox.Show("No se encontró codigo!!", "Error actualización", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+            }
+            catch (Exception ex){ 
+                MessageBox.Show(ex.StackTrace, "error", MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -61,7 +102,9 @@ namespace CapaPresentacion
             try
             {
                 cD_Clientes.CP_mtdAgregarClientes(txtNombres.Text, txtDireccion.Text, txtDepartamento.Text, txtPais.Text, cboxCategoria.Text, cboxEstado.Text);
+                MtdMostrarClientes();
                 MessageBox.Show("El Cliente se agrego con exito", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
 
             }
             catch (Exception ex)
