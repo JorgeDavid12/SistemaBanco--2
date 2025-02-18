@@ -80,6 +80,7 @@
             this.dgvClientes.RowTemplate.Height = 24;
             this.dgvClientes.Size = new System.Drawing.Size(1154, 328);
             this.dgvClientes.TabIndex = 21;
+            this.dgvClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellClick);
             // 
             // gboxCuentas
             // 
@@ -132,9 +133,10 @@
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(129, 40);
             this.btnGuardar.TabIndex = 18;
-            this.btnGuardar.Text = "Cancelar";
+            this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnActualizar
             // 
@@ -171,8 +173,8 @@
             this.cboxTipoC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(34)))), ((int)(((byte)(118)))));
             this.cboxTipoC.FormattingEnabled = true;
             this.cboxTipoC.Items.AddRange(new object[] {
-            "Activo",
-            "Inactivo"});
+            "Ahorro",
+            "Corriente"});
             this.cboxTipoC.Location = new System.Drawing.Point(207, 162);
             this.cboxTipoC.Name = "cboxTipoC";
             this.cboxTipoC.Size = new System.Drawing.Size(196, 30);

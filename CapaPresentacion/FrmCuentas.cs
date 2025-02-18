@@ -29,5 +29,34 @@ namespace CapaPresentacion
         {
             MtdMostrarCuentas();
         }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            CDCuentas cD_Cuentas = new CDCuentas();
+
+            try
+            {
+                cD_Cuentas.CP_mtdAgregarCuentas(txtCodigoClientes.Text, txtNumeroC.Text, cboxTipoC.Text, decimal.Parse(txtSaldo.Text), DateTime.Parse(txtFechaApertura.Text), cboxEstado.Text);
+                MtdMostrarCuentas();
+                MessageBox.Show("El Cliente se agrego con exito", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace, "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void dgvClientes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtCodigoCuentas.Text = dgvClientes.SelectedCells[0].Value.ToString();
+            txtCodigoClientes.Text = dgvClientes.SelectedCells[1].Value.ToString();
+            txtNumeroC.Text = dgvClientes.SelectedCells[2].Value.ToString();
+            cboxTipoC.Text = dgvClientes.SelectedCells[3].Value.ToString();
+            txtSaldo.Text = dgvClientes.SelectedCells[4].Value.ToString();
+            txtFechaApertura.Text = dgvClientes.SelectedCells[5].Value.ToString();
+            cboxEstado.Text = dgvClientes.SelectedCells[6].Value.ToString();
+        }
     }
 }

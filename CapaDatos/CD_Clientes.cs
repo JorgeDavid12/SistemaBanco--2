@@ -86,7 +86,6 @@ namespace CapaDatos
 
             return vContarRegistrosAfectados;
         }
-        //ssssss   
 
         public int CP_mtdEliminarClientes(string codigo)
         {
