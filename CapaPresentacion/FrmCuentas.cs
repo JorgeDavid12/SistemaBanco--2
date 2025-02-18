@@ -25,6 +25,26 @@ namespace CapaPresentacion
             dgvClientes.DataSource = dtMostrarCuentas;
         }
 
+        private void mtdLimpiarTextBoxes(Control parent)
+        {
+            foreach (Control c in parent.Controls)
+            {
+                if (c is TextBox)
+                {
+                    ((TextBox)c).Clear();
+                }
+                else if (c is ComboBox)
+                {
+                    ((ComboBox)c).SelectedIndex = -1;
+                    ((ComboBox)c).Text = string.Empty;
+                }
+                else if (c.HasChildren)
+                {
+                    mtdLimpiarTextBoxes(c);
+                }
+            }
+        }
+
         private void FrmCuentas_Load(object sender, EventArgs e)
         {
             MtdMostrarCuentas();
@@ -109,6 +129,11 @@ namespace CapaPresentacion
                 MessageBox.Show("No se encontró codigo!!", "Error eliminacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            mtdLimpiarTextBoxes(this);
         }
     }
 }
