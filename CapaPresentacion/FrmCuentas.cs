@@ -91,5 +91,24 @@ namespace CapaPresentacion
                 MessageBox.Show(ex.StackTrace, "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            CDCuentas cp_classCuentas= new CDCuentas();
+
+            int codigo = int.Parse(txtCodigoCuentas.Text);
+            int vCantidadRegistros = cp_classCuentas.CP_mtdEliminarCuentas(codigo);
+            MtdMostrarCuentas();
+
+            if (vCantidadRegistros > 0)
+            {
+                MessageBox.Show("Registro Eliminado!!", "Correcto!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("No se encontró codigo!!", "Error eliminacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+        }
     }
 }

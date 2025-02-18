@@ -102,5 +102,19 @@ namespace CapaDatos
 
             return vContarRegistrosAfectados;
         }
+
+        public int CP_mtdEliminarCuentas(int codigo)
+        {
+            int vCantidadRegistrosEliminados = 0;
+
+            string vUspEliminarCuentas = "uspCuentasEliminar";
+            SqlCommand commEliminarCuentas = new SqlCommand(vUspEliminarCuentas, conexion.MtdAbrirConexion());
+            commEliminarCuentas.CommandType = CommandType.StoredProcedure;
+
+            commEliminarCuentas.Parameters.AddWithValue("@CodigoCuenta", codigo);
+
+            vCantidadRegistrosEliminados = commEliminarCuentas.ExecuteNonQuery();
+            return vCantidadRegistrosEliminados;
+        }
     }
 }
